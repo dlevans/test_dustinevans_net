@@ -23,7 +23,7 @@ import Search from "./pages/Search";
 import ClearlyGuilty from "./pages/ClearlyGuilty";
 import PageNotFound from "./pages/PageNotFound";
 import { Route, Switch } from "react-router-dom";
-import ErrorBoundary from "./ErrorBoundary";
+import ErrorBoundary from "./ErrorBoundary"; 
 
 function App() {
   const [images, setImages] = useState([]); 
