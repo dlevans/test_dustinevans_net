@@ -7,7 +7,7 @@ function Footer() {
   return (
     <div className="footer">      
         <p>
-        © {today.getFullYear()} Dustin Evans. All rights reserved.
+        © {today.getFullYear()} Dustin Evans. All rights reserved. 
         </p>
     </div>
   );
