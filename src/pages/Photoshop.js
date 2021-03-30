@@ -21,7 +21,7 @@ function Photoshop({images, setImages}) {
         //}
       }
       initImages();
-    }, []);
+    },);
 
   return (
     <div className="page">

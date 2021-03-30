@@ -21,7 +21,7 @@ function Portraits({images, setImages}) {
       //}
     }
     initImages();
-  }, []);
+  }, );
 
   return (
     <div className="page">

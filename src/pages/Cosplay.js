@@ -20,7 +20,7 @@ function Cosplay({images, setImages}) {
         }
       //}
       initImages();
-    }, []);
+    }, );
 
   return (
     <div className="page">
