@@ -2,9 +2,9 @@ import React, {useEffect} from "react";
 import axios from 'axios'
 import Footer from "../Footer";
 
-function Photoshop({images, setImages}) {
+function BlackZone({images, setImages}) {
 
-  const query = "photoshop";
+  const query = "blackzone";
 
   async function getImages() {
     return axios.get("db.json");  }
@@ -23,28 +23,28 @@ function Photoshop({images, setImages}) {
       initImages();
     },);
 
-    return (
-      <div className="page">
-        <h1>Photoshop</h1>
-            {images.map(image => (
-              <div className="item" key={image.id}>
-              <li>
-                <a href={image.url+image.filename} target="_blank" rel="noopener noreferrer">
-                  <img alt={image.alt} src={image.thumbnail+image.filename} />
-                </a>
-                <span className="caption">
-                  {image.id} <br></br>
-                  {image.client}<br></br>
-                  {image.alt}
-                </span>
-              </li>
-            </div>
-            ))
-            }
+  return (
+    <div className="page">
+      <h1>Black Zone</h1>
+          {images.map(image => (
+            <div className="item" key={image.id}>
+            <li>
+              <a href={image.url+image.filename} target="_blank" rel="noopener noreferrer">
+                <img alt={image.alt} src={image.thumbnail+image.filename} />
+              </a>
+              <span className="caption">
+                {image.id} <br></br>
+                {image.client}<br></br>
+                {image.alt}
+              </span>
+            </li>
+          </div>
+          ))
+          }
         
         <Footer />
     </div>
   );
 }
 
-export default Photoshop;
+export default BlackZone;

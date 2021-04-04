@@ -22,6 +22,8 @@ import Nav from "./Nav";
 import Search from "./pages/Search";
 import ClearlyGuilty from "./pages/ClearlyGuilty";
 import ValkyrieBritannia from "./pages/ValkyrieBritannia";
+import BlackZone from "./pages/BlackZone";
+import JenniferForristal from "./pages/JenniferForristal";
 import PageNotFound from "./pages/PageNotFound";
 import { Route, Switch } from "react-router-dom";
 import ErrorBoundary from "./ErrorBoundary"; 
@@ -72,6 +74,14 @@ function App() {
           <Route path="/valkyriebritannia">
             <ValkyrieBritannia images={images} setImages={setImages}/>
           </Route>
+
+          <Route path="/blackzone">
+            <BlackZone images={images} setImages={setImages}/>
+          </Route>
+
+          <Route path="/jenniferforristal">
+            <JenniferForristal images={images} setImages={setImages}/>
+          </Route>          
 
           <Route path="/itable" exact>
             < ITable />            
