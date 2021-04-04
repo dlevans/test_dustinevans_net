@@ -1,12 +1,14 @@
 import React, {useEffect} from "react";
 import axios from 'axios'
-import { faInstagram, faTwitter, faYoutube, faTiktok } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faYoutube, faFacebook,  } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobeAmericas } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../Footer";
 
-function FancyJen({images, setImages}) {
 
-  const query = "fancyjen";
+function Julien({images, setImages}) {
+
+  const query = "julien";
 
   async function getImages() {
     return axios.get("db.json");  }
@@ -28,23 +30,19 @@ function FancyJen({images, setImages}) {
   return (
     <div className="page">
       <div class="page-nav" >
-        <h1>Fancy Jen Cosplay <br></br>
-        <a href="https://www.instagram.com/fancyjencosplay/">
+        <h1>Julien<br></br>
+        <a href="https://www.instagram.com/shotsbyjuju/">
                   <FontAwesomeIcon icon={faInstagram} />
         </a>      
         <span >Instagram</span>
-        <a href="https://twitter.com/CosplayJen">
-                  <FontAwesomeIcon icon={faTwitter} />
+        <a href="https://www.shotsbyjuju.com/">
+                  <FontAwesomeIcon icon={faGlobeAmericas} />
         </a>
-        <span >Twitter</span>      
-        <a href="https://www.tiktok.com/@fancyjencosplay/">
-          <FontAwesomeIcon icon={faTiktok} />
+        <span >Website</span>      
+        <a href="https://www.facebook.com/shotsbyjuju">
+          <FontAwesomeIcon icon={faFacebook} />
         </a>
-        <span >TikTok</span>      
-        <a href="https://www.youtube.com/channel/UCJ7V8oaTq2lukZtyyet788w">
-                  <FontAwesomeIcon icon={faYoutube} />
-        </a>
-        <span >YouTube</span>      
+        <span >Facebook</span>                 
         </h1>        
       </div>
           {images.map(image => (
@@ -68,4 +66,4 @@ function FancyJen({images, setImages}) {
   );
 }
 
-export default FancyJen;
+export default Julien;
