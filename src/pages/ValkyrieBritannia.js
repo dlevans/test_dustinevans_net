@@ -6,7 +6,7 @@ import Footer from "../Footer";
 
 function ValkyrieBritannia({images, setImages}) {
 
-  const query = "ValkyrieBritannia";
+  const query = "valkyriebritannia";
 
   async function getImages() {
     return axios.get("db.json");  }
