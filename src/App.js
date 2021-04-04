@@ -23,7 +23,7 @@ import Search from "./pages/Search";
 import ClearlyGuilty from "./pages/ClearlyGuilty";
 import ValkyrieBritannia from "./pages/ValkyrieBritannia";
 import BlackZone from "./pages/BlackZone";
-import JenniferForristal from "./pages/JenniferForristal";
+import FancyJen from "./pages/FancyJen";
 import PageNotFound from "./pages/PageNotFound";
 import { Route, Switch } from "react-router-dom";
 import ErrorBoundary from "./ErrorBoundary"; 
@@ -79,8 +79,8 @@ function App() {
             <BlackZone images={images} setImages={setImages}/>
           </Route>
 
-          <Route path="/jenniferforristal">
-            <JenniferForristal images={images} setImages={setImages}/>
+          <Route path="/FancyJen">
+            <FancyJen images={images} setImages={setImages}/>
           </Route>          
 
           <Route path="/itable" exact>

@@ -4,7 +4,7 @@ import Footer from "../Footer";
 
 function JenniferForristal({images, setImages}) {
 
-  const query = "jenniferForristal";
+  const query = "jenniferforristal";
 
   async function getImages() {
     return axios.get("db.json");  }

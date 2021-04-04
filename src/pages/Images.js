@@ -57,10 +57,10 @@ function Images() {
     {src: "http://photos.dustinevans.net/Images/BlackZone/thumbnails/MVIMG_20191216_023207.jpg"}    
   ];
 
-  const jenniferforristal = [
-    {src: "http://photos.dustinevans.net/Images/JenniferForristal/2020/thumbnails/IMG_3685.jpg"},
-    {src: "http://photos.dustinevans.net/Images/JenniferForristal/2020/thumbnails/IMG_3623.jpg"},
-    {src: "http://photos.dustinevans.net/Images/JenniferForristal/2020/thumbnails/COMP_IMG_3655.jpg"}    
+  const FancyJen = [
+    {src: "http://photos.dustinevans.net/Images/FancyJen/2020/thumbnails/IMG_3685.jpg"},
+    {src: "http://photos.dustinevans.net/Images/FancyJen/2020/thumbnails/IMG_3623.jpg"},
+    {src: "http://photos.dustinevans.net/Images/FancyJen/2020/thumbnails/COMP_IMG_3655.jpg"}    
   ];
 
   return (
@@ -124,8 +124,8 @@ function Images() {
       </div>
 
       <div className="item">
-      <Link to="/jenniferforristal" style={{textDecoration: 'none', color: 'white'}}>
-      <img alt="JenniferForristal" src={jenniferforristal[getRandomInt(0,jenniferforristal.length)].src} ></img>
+      <Link to="/FancyJen" style={{textDecoration: 'none', color: 'white'}}>
+      <img alt="FancyJen" src={FancyJen[getRandomInt(0,FancyJen.length)].src} ></img>
       <span className="caption">Jennifer Forristal</span>
       </Link>
       </div>
