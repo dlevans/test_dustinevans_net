@@ -4,7 +4,7 @@ import Footer from "../Footer";
 
 function ClearlyGuilty({images, setImages}) {
 
-  const query = "clearly guilty";
+  const query = "clearlyguilty";
 
   async function getImages() {
     return axios.get("db.json");  }
