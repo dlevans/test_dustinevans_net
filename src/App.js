@@ -21,6 +21,7 @@ import Home from "./pages/Home";
 import Nav from "./Nav";
 import Search from "./pages/Search";
 import ClearlyGuilty from "./pages/ClearlyGuilty";
+import ValkyrieBritannia from "./pages/ValkyrieBritannia";
 import PageNotFound from "./pages/PageNotFound";
 import { Route, Switch } from "react-router-dom";
 import ErrorBoundary from "./ErrorBoundary"; 
@@ -66,6 +67,10 @@ function App() {
 
           <Route path="/clearlyguilty">
             <ClearlyGuilty images={images} setImages={setImages}/>
+          </Route>
+
+          <Route path="/valkyriebritannia">
+            <ValkyrieBritannia images={images} setImages={setImages}/>
           </Route>
 
           <Route path="/itable" exact>

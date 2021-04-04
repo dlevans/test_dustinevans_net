@@ -41,9 +41,15 @@ function Images() {
   ];
 
   const clearlyguilty = [
-    {src: "http://photos.dustinevans.net/Images/ClearlyGuilty/2019/LowRes/IMG_9567.jpg"},
-    {src: "http://photos.dustinevans.net/Images/ClearlyGuilty/2019/LowRes/IMG_9636.jpg"},
-    {src: "http://photos.dustinevans.net/Images/ClearlyGuilty/2020/JPGs/IMG_1583.jpg"}    
+    {src: "http://photos.dustinevans.net/Images/ClearlyGuilty/2019/thumbnails/IMG_9567.jpg"},
+    {src: "http://photos.dustinevans.net/Images/ClearlyGuilty/2019/thumbnails/IMG_9636.jpg"},
+    {src: "http://photos.dustinevans.net/Images/ClearlyGuilty/2020/thumbnails/IMG_1583.jpg"}    
+  ];
+
+  const valkyriebritannia = [
+    {src: "http://photos.dustinevans.net/Images/ValkyrieBritannia/2020/thumbnails/IMG_3874.jpg"},
+    {src: "http://photos.dustinevans.net/Images/ValkyrieBritannia/2020/thumbnails/IMG_3714.jpg"},
+    {src: "http://photos.dustinevans.net/Images/ValkyrieBritannia/2020/thumbnails/IMG_3737.jpg"}    
   ];
 
   return (
@@ -89,6 +95,13 @@ function Images() {
       <Link to="/clearlyguilty" style={{textDecoration: 'none', color: 'white'}}>
       <img alt="clearlyguilty" src={clearlyguilty[getRandomInt(0,clearlyguilty.length)].src} ></img>
       <span className="caption">Clearly Guilty</span>
+      </Link>
+      </div>
+
+      <div className="item">
+      <Link to="/valkyriebritannia" style={{textDecoration: 'none', color: 'white'}}>
+      <img alt="valkyriebritannia" src={valkyriebritannia[getRandomInt(0,valkyriebritannia.length)].src} ></img>
+      <span className="caption">Valkyrie Britannia</span>
       </Link>
       </div>
 

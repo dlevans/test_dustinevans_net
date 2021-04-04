@@ -2,9 +2,9 @@ import React, {useEffect} from "react";
 import axios from 'axios'
 import Footer from "../Footer";
 
-function ClearlyGuilty({images, setImages}) {
+function ValkyrieBritannia({images, setImages}) {
 
-  const query = "clearly guilty";
+  const query = "ValkyrieBritannia";
 
   async function getImages() {
     return axios.get("db.json");  }
@@ -25,7 +25,7 @@ function ClearlyGuilty({images, setImages}) {
 
   return (
     <div className="page">
-      <h1>Clearly Guilty</h1>
+      <h1>Valkyrie Britannia</h1>
           {images.map(image => (
             <div className="item" key={image.id}>
             <li>
@@ -47,4 +47,4 @@ function ClearlyGuilty({images, setImages}) {
   );
 }
 
-export default ClearlyGuilty;
+export default ValkyrieBritannia;
