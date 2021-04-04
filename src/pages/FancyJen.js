@@ -25,7 +25,7 @@ function JenniferForristal({images, setImages}) {
 
   return (
     <div className="page">
-      <h1>Jennifer Forristal</h1>
+      <h1>Fancy Jen Cosplay</h1>
           {images.map(image => (
             <div className="item" key={image.id}>
             <li>
