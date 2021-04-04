@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import axios from 'axios'
-import { faInstagram, faYoutube, faFacebook,  } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faFacebook,  } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobeAmericas } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../Footer";

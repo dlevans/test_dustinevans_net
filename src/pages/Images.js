@@ -17,7 +17,7 @@ function Images() {
   ];
 
   const portraits = [
-    {src: "http://photos.dustinevans.net/Images/ValkyrieBritannia/2020/thumbnails/IMG_0751.jpg"},//add
+    {src: "http://photos.dustinevans.net/Images/ValkyrieBritannia/2020/thumbnails/IMG_0751.jpg"},
     {src: "http://photos.dustinevans.net/Images/Portraits/KC Superman/2018/thumbnails/IMG_7641.jpg"},
     {src: "http://photos.dustinevans.net/Images/Portraits/Julien/2020/thumbnails/IMG_0534.jpg"}
   ];
@@ -27,9 +27,9 @@ function Images() {
     {src: "http://photos.dustinevans.net/Images/Landscape/KansasCity/2018/thumbnails/IMG_7626.jpg"}
   ];
 
-  const street = [
-    {src: "http://photos.dustinevans.net/Images/Cars/Nick/thumbnails/IMG_2172.jpg"},//add
-    {src: "http://photos.dustinevans.net/Images/Cars/Nick/thumbnails/IMG_2188.jpg"},//add
+  const vehicles = [
+    {src: "http://photos.dustinevans.net/Images/Cars/Nick/thumbnails/IMG_2172.jpg"},
+    {src: "http://photos.dustinevans.net/Images/Cars/Nick/thumbnails/IMG_2188.jpg"},
     {src: "http://photos.dustinevans.net/Images/Landscape/KansasCity/2020/thumbnails/IMG_0607.jpg"}    
   ];
 
@@ -63,6 +63,12 @@ function Images() {
     {src: "http://photos.dustinevans.net/Images/FancyJen/2020/thumbnails/COMP_IMG_3655.jpg"}    
   ];
 
+  const Julien = [
+    {src: "http://photos.dustinevans.net/Images/Portraits/Julien/2020/thumbnails/IMG_0534.jpg"},
+    {src: "http://photos.dustinevans.net/Images/Portraits/Julien/2020/thumbnails/IMG_0640.jpg"},
+    {src: "http://photos.dustinevans.net/Images/Portraits/Julien/2020/thumbnails/IMG_0678.jpg"}    
+  ];
+
   return (
     <div className="page">
       <h1>Images </h1>
@@ -89,9 +95,9 @@ function Images() {
       </div>
       
       <div className="item">
-      <Link to="/street" style={{textDecoration: 'none', color: 'white'}}>
-      <img alt="street" src={street[getRandomInt(0,street.length)].src} ></img>
-      <span className="caption">Street</span>
+      <Link to="/vehicles" style={{textDecoration: 'none', color: 'white'}}>
+      <img alt="vehicles" src={vehicles[getRandomInt(0,vehicles.length)].src} ></img>
+      <span className="caption">Vehicles</span>
       </Link>
       </div>
 
@@ -126,7 +132,14 @@ function Images() {
       <div className="item">
       <Link to="/FancyJen" style={{textDecoration: 'none', color: 'white'}}>
       <img alt="FancyJen" src={FancyJen[getRandomInt(0,FancyJen.length)].src} ></img>
-      <span className="caption">Jennifer Forristal</span>
+      <span className="caption">Fancy Jen Cosplay</span>
+      </Link>
+      </div>
+
+      <div className="item">
+      <Link to="/Julien" style={{textDecoration: 'none', color: 'white'}}>
+      <img alt="Julien" src={Julien[getRandomInt(0,Julien.length)].src} ></img>
+      <span className="caption">Julien</span>
       </Link>
       </div>
 

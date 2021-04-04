@@ -1,5 +1,7 @@
 import React, {useEffect} from "react";
 import axios from 'axios'
+import { faInstagram, faEtsy } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Footer from "../Footer";
 
 function ValkyrieBritannia({images, setImages}) {
@@ -25,6 +27,18 @@ function ValkyrieBritannia({images, setImages}) {
 
   return (
     <div className="page">
+      <div class="page-nav" >
+        <h1>Valkyrie Britannia<br></br>
+        <a href="https://www.instagram.com/valkyriebritannia/">
+                  <FontAwesomeIcon icon={faInstagram} />
+        </a>      
+        <span >Instagram</span>
+        <a href="https://www.etsy.com/shop/valkyriebritannia">
+                  <FontAwesomeIcon icon={faEtsy} />
+        </a>
+        <span >Etsy</span>           
+        </h1>        
+      </div>
       <h1>Valkyrie Britannia</h1>
           {images.map(image => (
             <div className="item" key={image.id}>

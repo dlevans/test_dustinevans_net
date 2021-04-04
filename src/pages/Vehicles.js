@@ -2,9 +2,9 @@ import React, {useEffect} from "react";
 import axios from 'axios'
 import Footer from "../Footer";
 
-function Street({images, setImages}) {
+function Vehicles({images, setImages}) {
 
-  const query = "car";
+  const query = "vehicles";
 
   async function getImages() {
     return axios.get("db.json");  }
@@ -25,7 +25,7 @@ function Street({images, setImages}) {
 
     return (
       <div className="page">
-        <h1>Streets</h1>
+        <h1>Vehicles</h1>
             {images.map(image => (
               <div className="item" key={image.id}>
               <li>
@@ -47,4 +47,4 @@ function Street({images, setImages}) {
   );
 }
 
-export default Street;
+export default Vehicles;

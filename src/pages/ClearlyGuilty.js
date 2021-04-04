@@ -1,5 +1,7 @@
 import React, {useEffect} from "react";
 import axios from 'axios'
+import { faInstagram, faPatreon, faFacebook, faBandcamp  } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Footer from "../Footer";
 
 function ClearlyGuilty({images, setImages}) {
@@ -25,7 +27,27 @@ function ClearlyGuilty({images, setImages}) {
 
   return (
     <div className="page">
-      <h1>Clearly Guilty</h1>
+      <div class="page-nav" >
+      <h1>Clearly Guilty<br></br>
+        <a href="https://www.instagram.com/clearlyguilty/">
+                  <FontAwesomeIcon icon={faInstagram} />
+        </a>      
+        <span >Instagram</span>
+        <a href="https://www.patreon.com/ClearlyGuilty">
+                  <FontAwesomeIcon icon={faPatreon} />
+        </a>
+        <span >Patreon</span>    
+        <a href="https://clearlyguilty.bandcamp.com/">
+          <FontAwesomeIcon icon={faBandcamp} />
+        </a>
+        <span >Bandcamp</span>    
+        <a href="https://www.facebook.com/ClearlyGuilty">
+          <FontAwesomeIcon icon={faFacebook} />
+        </a>
+        <span >Facebook</span>                 
+        </h1>        
+      </div>
+      
           {images.map(image => (
             <div className="item" key={image.id}>
             <li>

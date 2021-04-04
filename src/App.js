@@ -4,7 +4,7 @@ import Projects from "./pages/Projects"
 import Cosplay from "./pages/Cosplay";
 import Portraits from "./pages/Portraits";
 import Landscape from "./pages/Landscape";
-import Street from "./pages/Street";
+import Vehicles from "./pages/Vehicles";
 import ITable from "./pages/ITable";
 import Retropie from "./pages/RetroPie";
 import LEDgoggles1 from "./pages/LEDGoggles1";
@@ -24,6 +24,7 @@ import ClearlyGuilty from "./pages/ClearlyGuilty";
 import ValkyrieBritannia from "./pages/ValkyrieBritannia";
 import BlackZone from "./pages/BlackZone";
 import FancyJen from "./pages/FancyJen";
+import Julien from "./pages/Julien";
 import PageNotFound from "./pages/PageNotFound";
 import { Route, Switch } from "react-router-dom";
 import ErrorBoundary from "./ErrorBoundary"; 
@@ -81,7 +82,11 @@ function App() {
 
           <Route path="/FancyJen">
             <FancyJen images={images} setImages={setImages}/>
-          </Route>          
+          </Route>       
+
+          <Route path="/Julien">
+            <Julien images={images} setImages={setImages}/>
+          </Route>      
 
           <Route path="/itable" exact>
             < ITable />            
@@ -127,8 +132,8 @@ function App() {
             < BB8 />            
           </Route>
 
-          <Route path="/street" exact>
-            < Street images={images} setImages={setImages}/>          
+          <Route path="/vehicles" exact>
+            < Vehicles images={images} setImages={setImages}/>          
           </Route>
 
           <Route path="/photoshop" exact>
