@@ -11,62 +11,62 @@ function Images() {
   }
 
   const cosplay = [
-    {src: "http://photos.dustinevans.net/Images/ValkyrieBritannia/2020/thumbnails/IMG_1692.jpg"},
-    {src: "http://photos.dustinevans.net/Images/ValkyrieBritannia/2020/thumbnails/IMG_1953.jpg"},
-    {src: "http://photos.dustinevans.net/Images/ValkyrieBritannia/2020/thumbnails/IMG_2075.jpg"}
+    {src: "http://dustinevans.net/Images/ValkyrieBritannia/2020/thumbnails/IMG_1692.jpg"},
+    {src: "http://dustinevans.net/Images/ValkyrieBritannia/2020/thumbnails/IMG_1953.jpg"},
+    {src: "http://dustinevans.net/Images/ValkyrieBritannia/2020/thumbnails/IMG_2075.jpg"}
   ];
 
   const portraits = [
-    {src: "http://photos.dustinevans.net/Images/ValkyrieBritannia/2020/thumbnails/IMG_0751.jpg"},
-    {src: "http://photos.dustinevans.net/Images/Portraits/KC Superman/2018/thumbnails/IMG_7641.jpg"},
-    {src: "http://photos.dustinevans.net/Images/Portraits/Julien/2020/thumbnails/IMG_0534.jpg"}
+    {src: "http://dustinevans.net/Images/ValkyrieBritannia/2020/thumbnails/IMG_0751.jpg"},
+    {src: "http://dustinevans.net/Images/Portraits/KC Superman/2018/thumbnails/IMG_7641.jpg"},
+    {src: "http://dustinevans.net/Images/Portraits/Julien/2020/thumbnails/IMG_0534.jpg"}
   ];
 
   const landscape = [
-    {src: "http://photos.dustinevans.net/Images/Landscape/KansasCity/2020/thumbnails/IMG_0560.jpg"},
-    {src: "http://photos.dustinevans.net/Images/Landscape/KansasCity/2018/thumbnails/IMG_7626.jpg"}
+    {src: "http://dustinevans.net/Images/Landscape/KansasCity/2020/thumbnails/IMG_0560.jpg"},
+    {src: "http://dustinevans.net/Images/Landscape/KansasCity/2018/thumbnails/IMG_7626.jpg"}
   ];
 
   const vehicles = [
-    {src: "http://photos.dustinevans.net/Images/Cars/Nick/thumbnails/IMG_2172.jpg"},
-    {src: "http://photos.dustinevans.net/Images/Cars/Nick/thumbnails/IMG_2188.jpg"},
-    {src: "http://photos.dustinevans.net/Images/Landscape/KansasCity/2020/thumbnails/IMG_0607.jpg"}    
+    {src: "http://dustinevans.net/Images/Cars/Nick/thumbnails/IMG_2172.jpg"},
+    {src: "http://dustinevans.net/Images/Cars/Nick/thumbnails/IMG_2188.jpg"},
+    {src: "http://dustinevans.net/Images/Landscape/KansasCity/2020/thumbnails/IMG_0607.jpg"}    
   ];
 
   const photoshop = [
-    {src: "http://photos.dustinevans.net/Images/Photoshop/thumbnails/color.jpg"},
-    {src: "http://photos.dustinevans.net/Images/Photoshop/thumbnails/firepainting.jpg"},
-    {src: "http://photos.dustinevans.net/Images/Photoshop/thumbnails/leia_1.jpg"}    
+    {src: "http://dustinevans.net/Images/Photoshop/thumbnails/color.jpg"},
+    {src: "http://dustinevans.net/Images/Photoshop/thumbnails/firepainting.jpg"},
+    {src: "http://dustinevans.net/Images/Photoshop/thumbnails/leia_1.jpg"}    
   ];
 
   const clearlyguilty = [
-    {src: "http://photos.dustinevans.net/Images/ClearlyGuilty/2019/thumbnails/IMG_9567.jpg"},
-    {src: "http://photos.dustinevans.net/Images/ClearlyGuilty/2019/thumbnails/IMG_9636.jpg"},
-    {src: "http://photos.dustinevans.net/Images/ClearlyGuilty/2020/thumbnails/IMG_1583.jpg"}    
+    {src: "http://dustinevans.net/Images/ClearlyGuilty/2019/thumbnails/IMG_9567.jpg"},
+    {src: "http://dustinevans.net/Images/ClearlyGuilty/2019/thumbnails/IMG_9636.jpg"},
+    {src: "http://dustinevans.net/Images/ClearlyGuilty/2020/thumbnails/IMG_1583.jpg"}    
   ];
 
   const valkyriebritannia = [
-    {src: "http://photos.dustinevans.net/Images/ValkyrieBritannia/2020/thumbnails/IMG_3874.jpg"},
-    {src: "http://photos.dustinevans.net/Images/ValkyrieBritannia/2020/thumbnails/IMG_3714.jpg"},
-    {src: "http://photos.dustinevans.net/Images/ValkyrieBritannia/2020/thumbnails/IMG_3737.jpg"}    
+    {src: "http://dustinevans.net/Images/ValkyrieBritannia/2020/thumbnails/IMG_3874.jpg"},
+    {src: "http://dustinevans.net/Images/ValkyrieBritannia/2020/thumbnails/IMG_3714.jpg"},
+    {src: "http://dustinevans.net/Images/ValkyrieBritannia/2020/thumbnails/IMG_3737.jpg"}    
   ];
 
   const blackzone = [
-    {src: "http://photos.dustinevans.net/Images/BlackZone/thumbnails/IMG_20191215_215856_1.jpg"},
-    {src: "http://photos.dustinevans.net/Images/BlackZone/thumbnails/IMG_20191215_000119.jpg"},
-    {src: "http://photos.dustinevans.net/Images/BlackZone/thumbnails/MVIMG_20191216_023207.jpg"}    
+    {src: "http://dustinevans.net/Images/BlackZone/thumbnails/IMG_20191215_215856_1.jpg"},
+    {src: "http://dustinevans.net/Images/BlackZone/thumbnails/IMG_20191215_000119.jpg"},
+    {src: "http://dustinevans.net/Images/BlackZone/thumbnails/MVIMG_20191216_023207.jpg"}    
   ];
 
   const FancyJen = [
-    {src: "http://photos.dustinevans.net/Images/FancyJen/2020/thumbnails/IMG_3685.jpg"},
-    {src: "http://photos.dustinevans.net/Images/FancyJen/2020/thumbnails/IMG_3623.jpg"},
-    {src: "http://photos.dustinevans.net/Images/FancyJen/2020/thumbnails/COMP_IMG_3655.jpg"}    
+    {src: "http://dustinevans.net/Images/FancyJen/2020/thumbnails/IMG_3685.jpg"},
+    {src: "http://dustinevans.net/Images/FancyJen/2020/thumbnails/IMG_3623.jpg"},
+    {src: "http://dustinevans.net/Images/FancyJen/2020/thumbnails/COMP_IMG_3655.jpg"}    
   ];
 
   const Julien = [
-    {src: "http://photos.dustinevans.net/Images/Portraits/Julien/2020/thumbnails/IMG_0534.jpg"},
-    {src: "http://photos.dustinevans.net/Images/Portraits/Julien/2020/thumbnails/IMG_0640.jpg"},
-    {src: "http://photos.dustinevans.net/Images/Portraits/Julien/2020/thumbnails/IMG_0678.jpg"}    
+    {src: "http://dustinevans.net/Images/Portraits/Julien/2020/thumbnails/IMG_0534.jpg"},
+    {src: "http://dustinevans.net/Images/Portraits/Julien/2020/thumbnails/IMG_0640.jpg"},
+    {src: "http://dustinevans.net/Images/Portraits/Julien/2020/thumbnails/IMG_0678.jpg"}    
   ];
 
   return (
