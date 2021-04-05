@@ -1,18 +1,59 @@
-import React from "react";
+import React, {useEffect} from "react";
+import axios from 'axios'
 import Footer from "../Footer";
 
-function TesseractCase() {
+function TesseractCase({images, setImages}) {
 
+  const query = "tesseract";
+
+  async function getImages() {
+    return axios.get("db.json");  }
+
+    useEffect(() => {
+      async function initImages() {
+        // if no images loaded, load 'em
+        //if (images.length === 0) {
+          const getImagesResponse = await getImages();
+          const newImages = getImagesResponse.data.images.filter(image => image.searchterm.toLowerCase().includes(query.toLowerCase().trim()));
+          //debugger;        
+          //setImages(getImagesResponse.data.images);
+          setImages(newImages);
+        //}
+      }
+      initImages();
+    },);
+    
   return (
     <div className="page">
       <h1>Tesseract Case</h1>
         <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem turpis, bibendum ut enim a, euismod eleifend arcu. Quisque pulvinar, ligula eget rutrum tincidunt, enim libero vestibulum magna, et eleifend turpis neque sit amet nisi. Morbi nec ligula tincidunt nulla porttitor malesuada ac vel nulla. Vivamus dignissim iaculis diam, a dictum lacus facilisis in. Nulla dui metus, auctor vitae odio aliquet, accumsan mattis nibh. Phasellus aliquet lectus a eleifend convallis. Etiam justo tellus, ornare at leo semper, dapibus dignissim purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur a mollis risus. Sed vulputate ullamcorper lobortis. Mauris cursus nisl eget dapibus luctus. Vestibulum at justo id mauris aliquam suscipit vel eget eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-        Duis porta rutrum eros vitae aliquet. Mauris efficitur vitae mi vitae lobortis. Sed vitae aliquam sem, placerat scelerisque sapien. Duis pulvinar, magna at imperdiet ultrices, ex orci volutpat sapien, sed volutpat lorem est eget velit. Aliquam vel commodo enim, in lacinia ipsum. Fusce et tempor diam. Aliquam ex neque, aliquam ac est venenatis, lacinia lobortis neque. Pellentesque non condimentum lorem. Donec urna ipsum, consequat eget elementum ut, imperdiet quis sapien. Donec quis risus feugiat, porttitor erat et, placerat ex. Morbi accumsan risus nisi, id porttitor enim maximus aliquet. Phasellus elementum quam eget sem ultrices rhoncus. Aenean scelerisque nisl et scelerisque tincidunt. Donec vitae justo interdum, bibendum sem vitae, fringilla urna.
-        Nullam eleifend velit purus, vel faucibus enim dictum ac. Nunc aliquam laoreet justo, pellentesque lacinia mi commodo quis. Etiam placerat placerat ante at faucibus. Quisque eu risus orci. Duis eget est vestibulum, lacinia dolor id, tincidunt neque. Vivamus molestie at nisl ac scelerisque. Aenean pharetra luctus pretium. Sed sollicitudin ullamcorper mi, eu dapibus nibh pretium nec. Nulla vitae vehicula orci. Etiam ex massa, rutrum in ante vitae, facilisis tincidunt lorem. Donec volutpat vehicula vulputate. Pellentesque fringilla maximus felis et scelerisque. In eget ornare nisi, id maximus sem. Etiam mi neque, blandit non fermentum in, elementum et mauris.
-        Maecenas congue condimentum leo. Phasellus vitae congue augue, vitae ullamcorper quam. Sed vel orci accumsan, pellentesque nisi non, facilisis libero. Donec blandit faucibus porta. Nunc lacinia dolor purus, at venenatis arcu sollicitudin ut. Suspendisse euismod pretium nisi. Proin sed aliquet nunc, sed tincidunt sem.
-        Praesent mollis ligula ac tellus sagittis aliquet. Proin at lacus ac eros placerat placerat. Aliquam erat volutpat. Aliquam quam leo, varius vitae efficitur in, vulputate eget ligula. Aliquam elit justo, dignissim et sollicitudin egestas, consequat a ipsum. Nulla congue venenatis enim, ut vulputate ante dapibus vel. Donec pretium, purus eget eleifend hendrerit, ipsum elit luctus leo, nec euismod eros sem ut ipsum. Nullam eu dolor id justo dapibus feugiat. Proin vel justo elementum nisl convallis iaculis. Duis luctus dolor felis, at sagittis tellus ultrices vitae. Phasellus rhoncus velit pulvinar porttitor consectetur. Fusce mollis malesuada elit, quis sagittis nulla.
+        <a href="http://en.wikipedia.org/wiki/The_Avengers_(2012_film)">The Avengers</a> is one of my favorite movies from recent years. I really like the way all of their story lines come together in a huge epic battle. 
+        I saw a guide online awhile back on making your own <a href="http://www.therpf.com/f78/build-tesseract-cosmic-cube-must-any-avengers-costume-picture-heavy-154280/">Tesseract</a> and wanted to build my own case, too.         
+        If you're not sure what I'm talking about, watch <a href="http://youtu.be/PngzUEsOZZI?t=1m59s">this</a>.
+        <br></br><br></br>
+        Inside is an Arduino with a spectrum shield and BlueSmirf Bluetooth Modem from SparkFun, a Raspberry Pi, 7" LCD Monitor, two speakers, a digital amp, a WiFi Card, and 2 strips of NeoPixels I got from Adafruit. The case I got from Harbor Freight.
+        <br></br><br></br>
+        The monitor has two video inputs. The Raspberry Pi has an RCA splitter that connects to the monitor and a video out on the side of the case. The second video input is wired to an RCA coupler on the side of the case. The audio is connected the same way. This means I can have audio or video connected to the case or brought out to a different system. In my living room, I had it connected to my projector.
+        I'm running Raspbian on the Pi with a stand-alone version of XBMC. I followed this guide to make the Pi broadcast its own wireless network. That setup along with AllCast allows me to send movies on my Nexus 7 to the Pi without me having to touch a thing. This is great because I conduct electricity like a member of the X-Men and actually broke one of my LEDs when I zapped the case on accident. 
+        
+        The Bluesmirf allows me to connect to, and change the LEDs with a custom Android app I wrote.
         </p>
+
+        {images.map(image => (
+            <div className="item" key={image.id}>
+            <li>
+              <a href={image.url+image.filename} target="_blank" rel="noopener noreferrer">
+                <img alt={image.alt} src={image.thumbnail+image.filename} />
+              </a>
+              <span className="caption">
+                {image.id} <br></br>
+                {image.client}<br></br>
+                {image.alt}
+              </span>
+            </li>
+          </div>
+          ))
+          }
         <Footer />
     </div>
   );

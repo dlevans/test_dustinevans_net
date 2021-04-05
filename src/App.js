@@ -11,8 +11,6 @@ import LEDgoggles1 from "./pages/LEDGoggles1";
 import LEDgoggles2 from "./pages/LEDGoggles2";
 import BlueNES1 from "./pages/BlueNES1";
 import BlueNES2 from "./pages/BlueNES2";
-import Xbox360 from "./pages/XBOX360";
-import ControlPanel from "./pages/ControlPanel";
 import TesseractCase from "./pages/Tesseract";
 import DNAArcade from "./pages/DNAArcade";
 import Photoshop from "./pages/Photoshop";
@@ -41,7 +39,7 @@ function App() {
         <Switch>
 
         <Route path="/" exact>
-            < Home />
+            < Home images={images} setImages={setImages}/>
           </Route>
 
           <Route path="/projects" exact>
@@ -89,47 +87,39 @@ function App() {
           </Route>      
 
           <Route path="/itable" exact>
-            < ITable />            
+            < ITable images={images} setImages={setImages}/>            
           </Route>
 
           <Route path="/retropie" exact>
-            < Retropie />            
+            < Retropie images={images} setImages={setImages}/>            
           </Route>
 
           <Route path="/ledgoggles1" exact>
-            < LEDgoggles1 />            
+            < LEDgoggles1 images={images} setImages={setImages}/>            
           </Route>
 
           <Route path="/ledgoggles2" exact>
-            < LEDgoggles2 />            
+            < LEDgoggles2 images={images} setImages={setImages}/>            
           </Route>
 
           <Route path="/bluenes1" exact>
-            < BlueNES1 />            
+            < BlueNES1 images={images} setImages={setImages}/>            
           </Route>
 
           <Route path="/bluenes2" exact>
-            < BlueNES2 />            
-          </Route>
-
-          <Route path="/xbox360" exact>
-            < Xbox360 />            
-          </Route>
-
-          <Route path="/controlpanel" exact>
-            < ControlPanel />            
+            < BlueNES2 images={images} setImages={setImages}/>            
           </Route>
 
           <Route path="/tesseractcase" exact>
-            < TesseractCase />            
+            < TesseractCase images={images} setImages={setImages}/>            
           </Route>
 
           <Route path="/dnaarcade" exact>
-            < DNAArcade />            
+            < DNAArcade images={images} setImages={setImages}/>            
           </Route>
 
           <Route path="/bb8" exact>
-            < BB8 />            
+            < BB8 images={images} setImages={setImages}/>            
           </Route>
 
           <Route path="/vehicles" exact>

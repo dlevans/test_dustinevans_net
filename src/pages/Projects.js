@@ -34,14 +34,6 @@ function Contact() {
     {src: "http://dustinevans.net/images/projects/bluenes2.png"}
   ];
 
-  const xbox360 = [
-    {src: "http://dustinevans.net/images/projects/xbox360.png"}
-  ];
-
-  const controlpanel = [
-    {src: "http://dustinevans.net/images/projects/controlpanel.png"}
-  ];
-
   const tesseractcase = [
     {src: "http://dustinevans.net/images/projects/tesseract.png"}
   ];
@@ -98,20 +90,6 @@ function Contact() {
           <img alt="bluenes2" src={bluenes2[getRandomInt(0,bluenes2.length)].src} ></img>
           <span className="caption">Blue NES 2</span>
         </Link>
-      </div>
-
-      <div className="item">
-      <Link to="/xbox360" style={{textDecoration: 'none', color: 'white'}}>
-      <img alt="xbox360" src={xbox360[getRandomInt(0,xbox360.length)].src} ></img>
-      <span className="caption">Xbox 360 Laptop</span>
-      </Link>
-      </div>
-      
-      <div className="item">
-      <Link to="/controlpanel" style={{textDecoration: 'none', color: 'white'}}>
-      <img alt="controlpanel" src={controlpanel[getRandomInt(0,controlpanel.length)].src} ></img>
-      <span className="caption">Control Panel</span>
-      </Link>
       </div>
       
       <div className="item">

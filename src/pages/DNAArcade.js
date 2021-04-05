@@ -1,18 +1,86 @@
-import React from "react";
+import React, {useEffect} from "react";
+import axios from 'axios'
 import Footer from "../Footer";
 
-function DNAArcade() {
+function DNAArcade({images, setImages}) {
 
+  const query = "arcade";
+
+  async function getImages() {
+    return axios.get("db.json");  }
+
+    useEffect(() => {
+      async function initImages() {
+        // if no images loaded, load 'em
+        //if (images.length === 0) {
+          const getImagesResponse = await getImages();
+          const newImages = getImagesResponse.data.images.filter(image => image.searchterm.toLowerCase().includes(query.toLowerCase().trim()));
+          //debugger;        
+          //setImages(getImagesResponse.data.images);
+          setImages(newImages);
+        //}
+      }
+      initImages();
+    },);
   return (
     <div className="page">
       <h1>DNA Arcade</h1>
         <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem turpis, bibendum ut enim a, euismod eleifend arcu. Quisque pulvinar, ligula eget rutrum tincidunt, enim libero vestibulum magna, et eleifend turpis neque sit amet nisi. Morbi nec ligula tincidunt nulla porttitor malesuada ac vel nulla. Vivamus dignissim iaculis diam, a dictum lacus facilisis in. Nulla dui metus, auctor vitae odio aliquet, accumsan mattis nibh. Phasellus aliquet lectus a eleifend convallis. Etiam justo tellus, ornare at leo semper, dapibus dignissim purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur a mollis risus. Sed vulputate ullamcorper lobortis. Mauris cursus nisl eget dapibus luctus. Vestibulum at justo id mauris aliquam suscipit vel eget eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-        Duis porta rutrum eros vitae aliquet. Mauris efficitur vitae mi vitae lobortis. Sed vitae aliquam sem, placerat scelerisque sapien. Duis pulvinar, magna at imperdiet ultrices, ex orci volutpat sapien, sed volutpat lorem est eget velit. Aliquam vel commodo enim, in lacinia ipsum. Fusce et tempor diam. Aliquam ex neque, aliquam ac est venenatis, lacinia lobortis neque. Pellentesque non condimentum lorem. Donec urna ipsum, consequat eget elementum ut, imperdiet quis sapien. Donec quis risus feugiat, porttitor erat et, placerat ex. Morbi accumsan risus nisi, id porttitor enim maximus aliquet. Phasellus elementum quam eget sem ultrices rhoncus. Aenean scelerisque nisl et scelerisque tincidunt. Donec vitae justo interdum, bibendum sem vitae, fringilla urna.
-        Nullam eleifend velit purus, vel faucibus enim dictum ac. Nunc aliquam laoreet justo, pellentesque lacinia mi commodo quis. Etiam placerat placerat ante at faucibus. Quisque eu risus orci. Duis eget est vestibulum, lacinia dolor id, tincidunt neque. Vivamus molestie at nisl ac scelerisque. Aenean pharetra luctus pretium. Sed sollicitudin ullamcorper mi, eu dapibus nibh pretium nec. Nulla vitae vehicula orci. Etiam ex massa, rutrum in ante vitae, facilisis tincidunt lorem. Donec volutpat vehicula vulputate. Pellentesque fringilla maximus felis et scelerisque. In eget ornare nisi, id maximus sem. Etiam mi neque, blandit non fermentum in, elementum et mauris.
-        Maecenas congue condimentum leo. Phasellus vitae congue augue, vitae ullamcorper quam. Sed vel orci accumsan, pellentesque nisi non, facilisis libero. Donec blandit faucibus porta. Nunc lacinia dolor purus, at venenatis arcu sollicitudin ut. Suspendisse euismod pretium nisi. Proin sed aliquet nunc, sed tincidunt sem.
-        Praesent mollis ligula ac tellus sagittis aliquet. Proin at lacus ac eros placerat placerat. Aliquam erat volutpat. Aliquam quam leo, varius vitae efficitur in, vulputate eget ligula. Aliquam elit justo, dignissim et sollicitudin egestas, consequat a ipsum. Nulla congue venenatis enim, ut vulputate ante dapibus vel. Donec pretium, purus eget eleifend hendrerit, ipsum elit luctus leo, nec euismod eros sem ut ipsum. Nullam eu dolor id justo dapibus feugiat. Proin vel justo elementum nisl convallis iaculis. Duis luctus dolor felis, at sagittis tellus ultrices vitae. Phasellus rhoncus velit pulvinar porttitor consectetur. Fusce mollis malesuada elit, quis sagittis nulla.
-        </p>
+        DNA stands for Dustin and Nick Arcade. 
+        The brains were salvaged from an old laptop a friend gave me with a broken screen. 
+        The buttons and control board are both from http://ultimarc.com/ We found a NES and SNES emulator that works from the command line. 
+        The software Nick wrote launches the appropriate emulator for the selected game in the background. The .rar has the source code and the emulators.        
+        </p>        
+          <ul>
+            <li><b>Parts List:</b></li>
+              <li>3 - 5/8" MDF (4' x 8')</li>
+              <li>5 - 2"x2"x8'5</li>
+              <li>75 - 1 5/8" Coated Screws 75</li>
+              <li>16 - Bolts for your casters (2" length by 1/4" diameter or larger)</li>
+              <li>1 - Small bottle of wood glue</li>
+              <li>1 - Wood putty or filler (covers your gaps and screw holes… optional)</li>
+              <li>2 - Spray cans of oil based primer (DO NOT USE WATER BASED PAINT ON MDF)</li>
+              <li>1 - 100' 18 Gauge Stranded Copper Wire (Red)</li>
+              <li>1 - 100' 18 Gauge Stranded Copper Wire (Black)</li>
+              <li>24 - 18 Gauge Femal Disconnects</li>
+              <li>1 - 2" x 2" PCB (or other distrobution mechanism for ground wires)</li>
+              <li>8+ - Arcade Buttons (Ultimarc.com)</li>
+              <li>1+ - Joystick (Ultimarc.com)</li>
+              <li>1 - Control Driver for buttons/Joystick (Ultimarc.com or you can DIY from a PC keyboard)</li>
+              <li>1+ - PC Speakers (we used two pair)</li>
+              <li>1 - Monitor</li>
+              <li>1 - Computer (We used the bottom half of a laptop. Raspberry Pi works just as well if you want to write your own interface or use Retro Pi)</li>
+              <li>1 - Lights (We used UV cold cathodes from Micro Center… Optional)</li>
+              <li>1 - Quart of paint (We used exterior paint to help be a moisture barrier...optional)</li>
+              <li>4 - Casters (wheels… optional but recommended)</li>
+              <li>1 - 32" x 32" Sheet of Plexiglass cut to fit (They typically sell and cut this stuff at hardware stores.. Optional)</li>
+          </ul>
+          <ul>
+            <li><b>Tools:</b></li>
+              <li>Circular Saw</li>
+              <li>Electric Drill</li>
+              <li>Reciprocating Saw (or a hand held router)</li>
+              <li>Soldering Iron</li>
+              <li>Wire Cutters/Strippers</li>
+              <li>Hot Glue Gun</li>
+              <li>Large Clamps</li>
+              <li>Patience</li>
+          </ul>
+        {images.map(image => (
+            <div className="item" key={image.id}>
+            <li>
+              <a href={image.url+image.filename} target="_blank" rel="noopener noreferrer">
+                <img alt={image.alt} src={image.thumbnail+image.filename} />
+              </a>
+              <span className="caption">
+                {image.id} <br></br>
+                {image.client}<br></br>
+                {image.alt}
+              </span>
+            </li>
+          </div>
+          ))
+          }
         <Footer />
     </div>
   );
